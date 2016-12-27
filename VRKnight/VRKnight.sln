@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRKnight.CSharp", "VRKnight.CSharp.csproj", "{5AE7BF4F-CBE1-EAEB-F4D4-992FAF7893E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRKnight.CSharp.Editor", "VRKnight.CSharp.Editor.csproj", "{59EBEF74-3934-4892-1DED-2FC6F1BA6765}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AE7BF4F-CBE1-EAEB-F4D4-992FAF7893E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AE7BF4F-CBE1-EAEB-F4D4-992FAF7893E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AE7BF4F-CBE1-EAEB-F4D4-992FAF7893E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AE7BF4F-CBE1-EAEB-F4D4-992FAF7893E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59EBEF74-3934-4892-1DED-2FC6F1BA6765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59EBEF74-3934-4892-1DED-2FC6F1BA6765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59EBEF74-3934-4892-1DED-2FC6F1BA6765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59EBEF74-3934-4892-1DED-2FC6F1BA6765}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
