@@ -18,6 +18,21 @@ public class OffenseScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Time.fixedDeltaTime % 5 == 0)
+        {
+            //Do an attack.
+        }
 	}
+    void Attack()
+    {
+
+    }
+    void Thrust()
+    {
+
+    }
+    void Slash()
+    {
+
+    }
 }
