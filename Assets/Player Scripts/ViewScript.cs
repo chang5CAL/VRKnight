@@ -11,6 +11,6 @@ public class ViewScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.LookAt(Input.mousePosition);   
+        transform.LookAt(Input.mousePosition);
 	}
 }
