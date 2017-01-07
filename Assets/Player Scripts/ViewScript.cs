@@ -13,4 +13,9 @@ public class ViewScript : MonoBehaviour {
 	void Update () {
         transform.LookAt(Input.mousePosition);
 	}
+
+    void onCollision()
+    {
+
+    }
 }
