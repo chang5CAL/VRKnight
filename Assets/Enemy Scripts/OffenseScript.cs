@@ -10,11 +10,11 @@ public class OffenseScript : MonoBehaviour {
     /// with the frequency increasing as time goes on.
     /// Does not stagger on successful block.
     /// </summary>
-
+    bool isActive;
 
 	// Use this for initialization
 	void Start () {
-		
+        isActive = false;
 	}
 	
 	// Update is called once per frame
@@ -23,6 +23,7 @@ public class OffenseScript : MonoBehaviour {
         System.Random rnd = new System.Random();
 		if (Time.fixedDeltaTime % 5 == 0)
         {
+            isActive = true;
             rand = rnd.Next(3);
             if (rand == 0)
             {
@@ -38,6 +39,7 @@ public class OffenseScript : MonoBehaviour {
             }
             //Do an attack.
         }
+        isActive = false;
 	}
     void Attack()
     {
