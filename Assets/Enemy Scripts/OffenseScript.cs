@@ -58,6 +58,21 @@ public class OffenseScript : MonoBehaviour {
             //The chance of the enemy to do another attack immediately instead of
             //waiting.
             chain++;
+            int rand;
+            System.Random rnd = new System.Random();
+            rand = rnd.Next(3);
+            if (rand == 0)
+            {
+                Attack();
+            }
+            else if (rand == 1)
+            {
+                Thrust();
+            }
+            else if (rand == 2)
+            {
+                Slash();
+            }
         }
                 
     }
@@ -68,6 +83,21 @@ public class OffenseScript : MonoBehaviour {
         if (5 / chain > 10)
         {
             chain++;
+            int rand;
+            System.Random rnd = new System.Random();
+            rand = rnd.Next(3);
+            if (rand == 0)
+            {
+                Attack();
+            }
+            else if (rand == 1)
+            {
+                Thrust();
+            }
+            else if (rand == 2)
+            {
+                Slash();
+            }
         }
 
     }
@@ -78,6 +108,21 @@ public class OffenseScript : MonoBehaviour {
         if (5 / chain > 10)
         {
             chain++;
+            int rand;
+            System.Random rnd = new System.Random();
+            rand = rnd.Next(3);
+            if (rand == 0)
+            {
+                Attack();
+            }
+            else if (rand == 1)
+            {
+                Thrust();
+            }
+            else if (rand == 2)
+            {
+                Slash();
+            }
         }
 
     }
