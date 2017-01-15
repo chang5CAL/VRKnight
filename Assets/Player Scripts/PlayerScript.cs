@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
-
     int hp;
+    AudioSource hitSound;
     // Use this for initialization
     void Start ()
     {
@@ -28,6 +28,7 @@ public class PlayerScript : MonoBehaviour {
         {
             //Subtract health
             hp--;
+            hitSound.Play();
         }
 
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CrosshairScript : MonoBehaviour {
     int score;
+    AudioSource blockSound;
 	// Use this for initialization
 	void Start () {
         score = 0;
@@ -18,6 +19,7 @@ public class CrosshairScript : MonoBehaviour {
         if (col.gameObject.name == "Enemy")
         {
             score++;
+            blockSound.Play();
         }
 
     }
