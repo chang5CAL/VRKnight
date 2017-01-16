@@ -33,7 +33,7 @@ public class OffenseScript : MonoBehaviour {
             rand = rnd.Next(3);
             if (rand == 0)
             {
-                Attack();
+                SlashLeft();
             }
             else if (rand == 1)
             {
@@ -41,13 +41,21 @@ public class OffenseScript : MonoBehaviour {
             }
             else if (rand == 2)
             {
-                Slash();
+                SlashLeftQuick();
+            }
+            else if (rand == 3)
+            {
+                SlashRight();
+            }
+            else if (rand == 4)
+            {
+                SlashRightQuick();
             }
             //Do an attack.
         }
         isActive = false;
 	}
-    void Attack()
+    void SlashLeft()
     {
 
         System.Random followUp = new System.Random();
@@ -63,7 +71,7 @@ public class OffenseScript : MonoBehaviour {
             rand = rnd.Next(3);
             if (rand == 0)
             {
-                Attack();
+                SlashLeft();
             }
             else if (rand == 1)
             {
@@ -71,7 +79,15 @@ public class OffenseScript : MonoBehaviour {
             }
             else if (rand == 2)
             {
-                Slash();
+                SlashLeftQuick();
+            }
+            else if (rand == 3)
+            {
+                SlashRight();
+            }
+            else if (rand == 4)
+            {
+                SlashRightQuick();
             }
         }
                 
@@ -88,7 +104,7 @@ public class OffenseScript : MonoBehaviour {
             rand = rnd.Next(3);
             if (rand == 0)
             {
-                Attack();
+                SlashLeft();
             }
             else if (rand == 1)
             {
@@ -96,12 +112,20 @@ public class OffenseScript : MonoBehaviour {
             }
             else if (rand == 2)
             {
-                Slash();
+                SlashLeftQuick();
+            }
+            else if (rand == 3)
+            {
+                SlashRight();
+            }
+            else if (rand == 4)
+            {
+                SlashRightQuick();
             }
         }
 
     }
-    void Slash()
+    void SlashLeftQuick()
     {
 
         System.Random followUp = new System.Random();
@@ -113,7 +137,7 @@ public class OffenseScript : MonoBehaviour {
             rand = rnd.Next(3);
             if (rand == 0)
             {
-                Attack();
+                SlashLeft();
             }
             else if (rand == 1)
             {
@@ -121,7 +145,85 @@ public class OffenseScript : MonoBehaviour {
             }
             else if (rand == 2)
             {
-                Slash();
+                SlashLeftQuick();
+            }
+            else if (rand == 3)
+            {
+                SlashRight();
+            }
+            else if (rand == 4)
+            {
+                SlashRightQuick();
+            }
+        }
+
+    }
+    void SlashRight()
+    {
+
+        System.Random followUp = new System.Random();
+        if (5 / chain > 10)
+        {
+            //Basically, get a random number and if it divided by the chain 
+            //is equal to a certain amount (Probably decided by time), increase
+            //The chance of the enemy to do another attack immediately instead of
+            //waiting.
+            chain++;
+            int rand;
+            System.Random rnd = new System.Random();
+            rand = rnd.Next(5);
+            if (rand == 0)
+            {
+                SlashLeft();
+            }
+            else if (rand == 1)
+            {
+                Thrust();
+            }
+            else if (rand == 2)
+            {
+                SlashLeftQuick();
+            }
+            else if (rand == 3)
+            {
+                SlashRight();
+            }
+            else if (rand == 4)
+            {
+                SlashRightQuick();
+            }
+        }
+
+    }
+    void SlashRightQuick()
+    {
+
+        System.Random followUp = new System.Random();
+        if (5 / chain > 10)
+        {
+            chain++;
+            int rand;
+            System.Random rnd = new System.Random();
+            rand = rnd.Next(3);
+            if (rand == 0)
+            {
+                SlashLeft();
+            }
+            else if (rand == 1)
+            {
+                Thrust();
+            }
+            else if (rand == 2)
+            {
+                SlashLeftQuick();
+            }
+            else if (rand == 3)
+            {
+                SlashRight();
+            }
+            else if (rand == 4)
+            {
+                SlashRightQuick();
             }
         }
 
