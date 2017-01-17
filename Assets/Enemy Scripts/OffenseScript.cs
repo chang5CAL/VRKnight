@@ -30,7 +30,7 @@ public class OffenseScript : MonoBehaviour {
         {
             chain++;
             isActive = true;
-            rand = rnd.Next(3);
+            rand = rnd.Next(5);
             if (rand == 0)
             {
                 SlashLeft();
@@ -68,7 +68,7 @@ public class OffenseScript : MonoBehaviour {
             chain++;
             int rand;
             System.Random rnd = new System.Random();
-            rand = rnd.Next(3);
+            rand = rnd.Next(5);
             if (rand == 0)
             {
                 SlashLeft();
@@ -101,7 +101,7 @@ public class OffenseScript : MonoBehaviour {
             chain++;
             int rand;
             System.Random rnd = new System.Random();
-            rand = rnd.Next(3);
+            rand = rnd.Next(5);
             if (rand == 0)
             {
                 SlashLeft();
@@ -134,7 +134,7 @@ public class OffenseScript : MonoBehaviour {
             chain++;
             int rand;
             System.Random rnd = new System.Random();
-            rand = rnd.Next(3);
+            rand = rnd.Next(5);
             if (rand == 0)
             {
                 SlashLeft();
@@ -204,7 +204,7 @@ public class OffenseScript : MonoBehaviour {
             chain++;
             int rand;
             System.Random rnd = new System.Random();
-            rand = rnd.Next(3);
+            rand = rnd.Next(5);
             if (rand == 0)
             {
                 SlashLeft();
