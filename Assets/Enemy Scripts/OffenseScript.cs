@@ -94,13 +94,27 @@ public class OffenseScript : MonoBehaviour {
     }
     void Thrust()
     {
+        int rand;
+        System.Random rnd = new System.Random();
+        rand = rnd.Next(3);
+        if (rand == 0)
+        {
+            //Thrust High
+        }
+        else if(rand == 1)
+        {
+            //Thrust Mid
+        }
+        else
+        {
+            //Thrust Low
+        }
+
 
         System.Random followUp = new System.Random();
         if (5 / chain > 10)
         {
             chain++;
-            int rand;
-            System.Random rnd = new System.Random();
             rand = rnd.Next(5);
             if (rand == 0)
             {
