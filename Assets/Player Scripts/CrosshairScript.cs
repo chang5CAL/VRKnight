@@ -5,11 +5,10 @@ using UnityEngine;
 public class CrosshairScript : MonoBehaviour {
     int score;
     AudioSource blockSound;
-    Texture2D crosshair;
+    public Texture2D crosshair;
 	// Use this for initialization
 	void Start () {
         score = 0;
-        //ImagePosition = Rect((Screen.width - crosshair.width) / 2, (Screen.height - crosshair.height) / 2, crosshair.width, crosshair.height);
 	}
 	
 	// Update is called once per frame
@@ -27,6 +26,8 @@ public class CrosshairScript : MonoBehaviour {
     }
     void OnGUI()
     {
-
+        float xMin = (Screen.width / 2) - (crosshair.width / 2);
+        float yMin = (Screen.height / 2) - (crosshair.height / 2);
+        GUI.DrawTexture(new Rect(xMin, yMin, crosshair.width, crosshair.height), crosshair);
     }
 }
