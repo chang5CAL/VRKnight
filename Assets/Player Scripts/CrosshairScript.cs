@@ -20,7 +20,8 @@ public class CrosshairScript : MonoBehaviour {
         if (col.gameObject.name == "Enemy")
         {
             score++;
-            blockSound.Play();
+            int time;
+            //Not sure how collision works with GUI elements, or even if it does.
         }
 
     }
@@ -29,5 +30,5 @@ public class CrosshairScript : MonoBehaviour {
         float xMin = (Screen.width / 2) - (crosshair.width / 2);
         float yMin = (Screen.height / 2) - (crosshair.height / 2);
         GUI.DrawTexture(new Rect(xMin, yMin, crosshair.width, crosshair.height), crosshair);
-    }
+    } 
 }
