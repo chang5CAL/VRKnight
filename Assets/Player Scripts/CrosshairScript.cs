@@ -20,8 +20,9 @@ public class CrosshairScript : MonoBehaviour {
         if (col.gameObject.name == "Enemy")
         {
             score++;
-            int time;
             //Not sure how collision works with GUI elements, or even if it does.
+            //I probably shouldn't dwell TOO hard on it, since I think this is probably going 
+            //to be taken from the SDK
         }
 
     }

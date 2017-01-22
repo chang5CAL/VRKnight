@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        transform.LookAt(Input.mousePosition);
         if (hp <= 0)
         {
             //Game Over
