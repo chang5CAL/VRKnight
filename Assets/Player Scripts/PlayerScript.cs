@@ -19,8 +19,17 @@ public class PlayerScript : MonoBehaviour {
         if (hp <= 0)
         {
             //Game Over
+            resetGame();
         }
 
+    }
+
+    void resetGame()
+    {
+        //Open up a GUI that let's the player do things
+        //On reset:
+        hp = 3;
+        //On Main menu
     }
 
     void onCollisionEnter(Collision col)
