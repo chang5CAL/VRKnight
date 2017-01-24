@@ -111,8 +111,9 @@ public class OffenseScript : MonoBehaviour {
         }
 
 
-        System.Random followUp = new System.Random();
-        if (5 / chain > 10)
+        System.Random follow = new System.Random();
+        followUp = follow.Next(10);
+        if (followUp > chain)
         {
             chain++;
             rand = rnd.Next(5);
