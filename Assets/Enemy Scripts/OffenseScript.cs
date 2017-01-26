@@ -60,7 +60,9 @@ public class OffenseScript : MonoBehaviour {
     {
         score = 1;
         System.Random followUp = new System.Random();
-        if (5 / chain > 10)
+        int follow = followUp.Next(chain);
+        //Probably not a great system...
+        if (follow > chain/2)
         {
             //Basically, get a random number and if it divided by the chain 
             //is equal to a certain amount (Probably decided by time), increase
