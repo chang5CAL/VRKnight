@@ -14,6 +14,7 @@ public class OffenseScript : MonoBehaviour {
     int chain;
     int followUp;
     bool coolDown;
+    public int score;
 
 	// Use this for initialization
 	void Start () {
@@ -57,7 +58,7 @@ public class OffenseScript : MonoBehaviour {
 	}
     void SlashLeft()
     {
-
+        score = 1;
         System.Random followUp = new System.Random();
         if (5 / chain > 10)
         {
@@ -94,6 +95,7 @@ public class OffenseScript : MonoBehaviour {
     }
     void Thrust()
     {
+        score = 2;
         int rand;
         System.Random rnd = new System.Random();
         rand = rnd.Next(3);
@@ -142,7 +144,7 @@ public class OffenseScript : MonoBehaviour {
     }
     void SlashLeftQuick()
     {
-
+        score = 2;
         System.Random followUp = new System.Random();
         if (5 / chain > 10)
         {
@@ -175,6 +177,7 @@ public class OffenseScript : MonoBehaviour {
     }
     void SlashRight()
     {
+        score = 1;
 
         System.Random followUp = new System.Random();
         if (5 / chain > 10)
@@ -212,6 +215,7 @@ public class OffenseScript : MonoBehaviour {
     }
     void SlashRightQuick()
     {
+        score = 2;
 
         System.Random followUp = new System.Random();
         if (5 / chain > 10)
