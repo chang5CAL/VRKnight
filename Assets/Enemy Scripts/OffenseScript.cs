@@ -148,7 +148,8 @@ public class OffenseScript : MonoBehaviour {
     {
         score = 2;
         System.Random followUp = new System.Random();
-        if (5 / chain > 10)
+        int follow = followUp.Next(10);
+        if (follow / chain > 10)
         {
             chain++;
             int rand;
@@ -182,7 +183,8 @@ public class OffenseScript : MonoBehaviour {
         score = 1;
 
         System.Random followUp = new System.Random();
-        if (5 / chain > 10)
+        int follow = followUp.Next(10);
+        if (follow / chain > 10)
         {
             //Basically, get a random number and if it divided by the chain 
             //is equal to a certain amount (Probably decided by time), increase
@@ -220,7 +222,8 @@ public class OffenseScript : MonoBehaviour {
         score = 2;
 
         System.Random followUp = new System.Random();
-        if (5 / chain > 10)
+        int follow = followUp.Next(10);
+        if (follow / chain > 10)
         {
             chain++;
             int rand;
