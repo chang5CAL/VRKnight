@@ -222,8 +222,8 @@ public class OffenseScript : MonoBehaviour {
         score = 2;
 
         System.Random followUp = new System.Random();
-        int follow = followUp.Next(10);
-        if (follow / chain > 10)
+        int follow = followUp.Next(score);
+        if (follow > chain*3)
         {
             chain++;
             int rand;
