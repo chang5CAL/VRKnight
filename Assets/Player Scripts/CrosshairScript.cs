@@ -8,7 +8,6 @@ public class CrosshairScript : MonoBehaviour {
     public Texture2D crosshair;
 	// Use this for initialization
 	void Start () {
-        score = 0;
 	}
 	
 	// Update is called once per frame
@@ -19,7 +18,6 @@ public class CrosshairScript : MonoBehaviour {
     {
         if (col.gameObject.name == "Enemy")
         {
-            score++;
             //Not sure how collision works with GUI elements, or even if it does.
             //I probably shouldn't dwell TOO hard on it, since I think this is probably going 
             //to be taken from the SDK
