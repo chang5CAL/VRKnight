@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
     int hp;
-    AudioSource hitSound;
+    public AudioSource hitSound;
     // Use this for initialization
     void Start ()
     {

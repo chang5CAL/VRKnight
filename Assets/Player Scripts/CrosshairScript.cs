@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CrosshairScript : MonoBehaviour {
     int score;
-    AudioSource blockSound;
+    public AudioSource blockSound;
     public Texture2D crosshair;
 	// Use this for initialization
 	void Start () {
