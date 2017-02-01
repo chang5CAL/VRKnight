@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CrosshairScript : MonoBehaviour {
-    int score;
     public AudioSource blockSound;
     public Texture2D crosshair;
 	// Use this for initialization

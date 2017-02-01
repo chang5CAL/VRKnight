@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ViewScript : MonoBehaviour
 {
-    public AudioSource blockSound;
     // Use this for initialization
     void Start () {
         //Need to move the camera with the player model
