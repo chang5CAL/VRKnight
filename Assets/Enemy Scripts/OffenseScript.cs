@@ -58,10 +58,10 @@ public class OffenseScript : MonoBehaviour {
 	}
     void SlashLeft()
     {
-        score = 1;
+        
+        score += 1;
         System.Random followUp = new System.Random();
         int follow = followUp.Next(chain);
-        //Probably not a great system...
         if (follow > chain * 3)
         {
             //Basically, get a random number and if it divided by the chain 
@@ -97,7 +97,7 @@ public class OffenseScript : MonoBehaviour {
     }
     void Thrust()
     {
-        score = 2;
+        score += 2;
         int rand;
         System.Random rnd = new System.Random();
         rand = rnd.Next(3);
@@ -146,7 +146,7 @@ public class OffenseScript : MonoBehaviour {
     }
     void SlashLeftQuick()
     {
-        score = 2;
+        score += 2;
         System.Random followUp = new System.Random();
         int follow = followUp.Next(score);
         if (follow > chain * 3)
@@ -180,7 +180,7 @@ public class OffenseScript : MonoBehaviour {
     }
     void SlashRight()
     {
-        score = 1;
+        score += 1;
 
         System.Random followUp = new System.Random();
         int follow = followUp.Next(score);
@@ -219,7 +219,7 @@ public class OffenseScript : MonoBehaviour {
     }
     void SlashRightQuick()
     {
-        score = 2;
+        score += 2;
 
         System.Random followUp = new System.Random();
         int follow = followUp.Next(score);
