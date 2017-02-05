@@ -106,15 +106,12 @@ public class OffenseScript : MonoBehaviour {
     void Chop()
     {
 
+        //This should just be a downward chop.
         score += 1;
         System.Random followUp = new System.Random();
         int follow = followUp.Next(chain);
         if (follow > chain * 3)
         {
-            //Basically, get a random number and if it divided by the chain 
-            //is equal to a certain amount (Probably decided by time), increase
-            //The chance of the enemy to do another attack immediately instead of
-            //waiting.
             chain++;
             int rand;
             System.Random rnd = new System.Random();
@@ -148,7 +145,7 @@ public class OffenseScript : MonoBehaviour {
     }
     void Thrust()
     {
-        score += 2;
+        score += 3;
         int rand;
         System.Random rnd = new System.Random();
         rand = rnd.Next(3);
