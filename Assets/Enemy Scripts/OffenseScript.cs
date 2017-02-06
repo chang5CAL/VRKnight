@@ -15,9 +15,18 @@ public class OffenseScript : MonoBehaviour {
     int followUp;
     bool coolDown;
     public int score;
+    public Animation reset;
+    public Animation leftSlash;
+    public Animation rightSlash;
+    public Animation leftSlashQuick;
+    public Animation rightSlashQuick;
+    public Animation chop;
+    public Animation highThrust;
+    public Animation medThrust;
+    public Animation lowThrust;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         isActive = false;
         coolDown = false; //If the player is hit, set to true.
         chain = 0;
