@@ -9,6 +9,8 @@ public class OffenseScript : MonoBehaviour {
     /// It'll just keep attacking every few seconds, 
     /// with the frequency increasing as time goes on.
     /// Does not stagger on successful block.
+    /// This is really only the sword. I might merge it
+    /// if I can get a model that's a knight with a sword.
     /// </summary>
     bool isActive;
     int chain;
