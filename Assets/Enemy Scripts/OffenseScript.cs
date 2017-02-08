@@ -327,4 +327,10 @@ public class OffenseScript : MonoBehaviour {
         }
 
     }
+
+    void resetToDefault()
+    {
+        //Put the enemy's sword position back to the default position.
+
+    }
 }
