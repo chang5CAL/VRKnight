@@ -330,7 +330,14 @@ public class OffenseScript : MonoBehaviour {
 
     void resetToDefault()
     {
+        float startTime = Time.deltaTime;
         //Put the enemy's sword position back to the default position.
+        while (Time.deltaTime < startTime+5)
+        {
+            //Here, take 5 seconds to put sword back in place. Probably too long.
+
+        }
+        //Reset position to normal position forcibly
 
     }
 }
