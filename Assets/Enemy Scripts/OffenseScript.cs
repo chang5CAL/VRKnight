@@ -338,6 +338,8 @@ public class OffenseScript : MonoBehaviour {
 
         }
         //Reset position to normal position forcibly
+        transform.position = new Vector3(.53f,.87f,0.0f);
+        transform.rotation = new Vector3(0.0f,0.0f,0.0f);
 
     }
 }
