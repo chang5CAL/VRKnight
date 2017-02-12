@@ -336,6 +336,14 @@ public class OffenseScript : MonoBehaviour {
         while (Time.deltaTime < startTime+5)
         {
             //Here, take 5 seconds to put sword back in place. Probably too long.
+            transform.position = new Vector3(transform.position.x - transform.position.x/5 + .53f, 
+                transform.position.y - transform.position.y/5+ .87f, 
+                transform.position.z - transform.position.z/5);
+
+            transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x/5,
+                transform.rotation.y - transform.rotation.y/5,
+                transform.rotation.z - transform.rotation.z/5,
+                transform.rotation.w - transform.rotation.w/5);
 
         }
         //Reset position to normal position forcibly
