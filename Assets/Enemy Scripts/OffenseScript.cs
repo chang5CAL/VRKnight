@@ -124,14 +124,18 @@ public class OffenseScript : MonoBehaviour {
         while (Time.deltaTime < startTime + 1)
         {
             //Here, take 5 seconds to put sword back in place. Probably too long.
-            transform.position = new Vector3(transform.position.x - transform.position.x / 5 + .53f,
-                transform.position.y - transform.position.y / 5 + .87f,
-                transform.position.z - transform.position.z / 5);
+            /*
+            transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
+                transform.position.y - transform.position.y / 2 + .87f,
+                transform.position.z - transform.position.z / 2);
+            */
 
-            transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x / 5,
-                transform.rotation.y - transform.rotation.y / 5,
-                transform.rotation.z - transform.rotation.z / 5,
-                transform.rotation.w - transform.rotation.w / 5);
+            transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x / 2,
+                transform.rotation.y,
+                transform.rotation.z,
+                transform.rotation.w);
+            //So I need to figure out which axis I need to rotate around I assume X, so I'm
+            //removing the rotation except for the X.
     }
 
             System.Random followUp = new System.Random();
