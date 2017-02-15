@@ -74,7 +74,24 @@ public class OffenseScript : MonoBehaviour {
 	}
     void SlashLeft()
     {
-        
+        float startTime = Time.deltaTime;
+        while (Time.deltaTime < startTime + 3)
+        {
+            //Here, take 5 seconds to put sword back in place. Probably too long.
+            /*
+            transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
+                transform.position.y - transform.position.y / 2 + .87f,
+                transform.position.z - transform.position.z / 2);
+            */
+
+            transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x / 2,
+                transform.rotation.y,
+                transform.rotation.z,
+                transform.rotation.w);
+            //So I need to figure out which axis I need to rotate around I assume X, so I'm
+            //removing the rotation except for the X.
+        }
+
         score += 1;
         System.Random followUp = new System.Random();
         int follow = followUp.Next(chain);
@@ -176,6 +193,23 @@ public class OffenseScript : MonoBehaviour {
     void Thrust()
     {
         score += 3;
+        float startTime = Time.deltaTime;
+        while (Time.deltaTime < startTime + 3)
+        {
+            //Here, take 5 seconds to put sword back in place. Probably too long.
+            /*
+            transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
+                transform.position.y - transform.position.y / 2 + .87f,
+                transform.position.z - transform.position.z / 2);
+            */
+
+            transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x / 2,
+                transform.rotation.y,
+                transform.rotation.z,
+                transform.rotation.w);
+            //So I need to figure out which axis I need to rotate around I assume X, so I'm
+            //removing the rotation except for the X.
+        }
         int rand;
         System.Random rnd = new System.Random();
         rand = rnd.Next(3);
@@ -229,6 +263,23 @@ public class OffenseScript : MonoBehaviour {
     void SlashLeftQuick()
     {
         score += 2;
+        float startTime = Time.deltaTime;
+        while (Time.deltaTime < startTime + 1)
+        {
+            //Here, take 5 seconds to put sword back in place. Probably too long.
+            /*
+            transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
+                transform.position.y - transform.position.y / 2 + .87f,
+                transform.position.z - transform.position.z / 2);
+            */
+
+            transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x / 2,
+                transform.rotation.y,
+                transform.rotation.z,
+                transform.rotation.w);
+            //So I need to figure out which axis I need to rotate around I assume X, so I'm
+            //removing the rotation except for the X.
+        }
         System.Random followUp = new System.Random();
         int follow = followUp.Next(score);
         if (follow > chain * 3)
@@ -311,6 +362,23 @@ public class OffenseScript : MonoBehaviour {
     {
         score += 2;
 
+        float startTime = Time.deltaTime;
+        while (Time.deltaTime < startTime + 1)
+        {
+            //Here, take 5 seconds to put sword back in place. Probably too long.
+            /*
+            transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
+                transform.position.y - transform.position.y / 2 + .87f,
+                transform.position.z - transform.position.z / 2);
+            */
+
+            transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x / 2,
+                transform.rotation.y,
+                transform.rotation.z,
+                transform.rotation.w);
+            //So I need to figure out which axis I need to rotate around I assume X, so I'm
+            //removing the rotation except for the X.
+        }
         System.Random followUp = new System.Random();
         int follow = followUp.Next(score);
         if (follow > chain*3)
