@@ -220,7 +220,7 @@ public class OffenseScript : MonoBehaviour {
             {
                 //Here, take 5 seconds to put sword back in place. Probably too long.
                 transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
-                    transform.position.y - transform.position.y / 2 + .87f,
+                    transform.position.y - transform.position.y / 2 + .5f,
                     transform.position.z - transform.position.z / 2);
 
                 transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x / 2,
@@ -238,7 +238,7 @@ public class OffenseScript : MonoBehaviour {
             {
                 //Here, take 5 seconds to put sword back in place. Probably too long.
                 transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
-                    transform.position.y - transform.position.y / 2 + .87f,
+                    transform.position.y,
                     transform.position.z - transform.position.z / 2);
                 transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x / 2,
                     transform.rotation.y,
@@ -268,7 +268,7 @@ public class OffenseScript : MonoBehaviour {
         while (Time.deltaTime < startTime + 5)
         {
             transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
-                transform.position.y - transform.position.y / 2 + .87f,
+                transform.position.y - transform.position.y / 2 - .5f,
                 transform.position.z - transform.position.z / 2);
             //This one just moves it forward to stab.
         }
