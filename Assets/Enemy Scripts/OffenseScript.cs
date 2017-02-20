@@ -138,7 +138,7 @@ public class OffenseScript : MonoBehaviour {
         //This should just be a downward chop.
         score += 1;
         float startTime = Time.deltaTime;
-        while (Time.deltaTime < startTime + 1)
+        while (Time.deltaTime < startTime + 3)
         {
             //Here, take 5 seconds to put sword back in place. Probably too long.
             /*
@@ -147,9 +147,9 @@ public class OffenseScript : MonoBehaviour {
                 transform.position.z - transform.position.z / 2);
             */
 
-            transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x / 2,
+            transform.rotation = new Quaternion(transform.rotation.x,
                 transform.rotation.y,
-                transform.rotation.z,
+                transform.rotation.z + 30,
                 transform.rotation.w);
             //So I need to figure out which axis I need to rotate around I assume X, so I'm
             //removing the rotation except for the X.
