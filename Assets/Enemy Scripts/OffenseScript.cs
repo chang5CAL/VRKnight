@@ -336,7 +336,7 @@ public class OffenseScript : MonoBehaviour {
                 transform.position.z - transform.position.z / 2);
             */
 
-            transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x / 2,
+            transform.rotation = new Quaternion(transform.rotation.x + 45,
                 transform.rotation.y,
                 transform.rotation.z,
                 transform.rotation.w);
@@ -352,7 +352,7 @@ public class OffenseScript : MonoBehaviour {
                 transform.position.z - transform.position.z / 2);
             */
 
-            transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x / 2,
+            transform.rotation = new Quaternion(transform.rotation.x - 135/3,
                 transform.rotation.y,
                 transform.rotation.z,
                 transform.rotation.w);
