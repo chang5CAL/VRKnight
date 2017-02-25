@@ -69,7 +69,6 @@ public class OffenseScript : MonoBehaviour {
             }
             //Do an attack.
         }
-        resetToDefault();
         isActive = false;
 	}
     void SlashLeft()
@@ -108,6 +107,7 @@ public class OffenseScript : MonoBehaviour {
             //removing the rotation except for the X.
         }
 
+        resetToDefault();
         score += 1;
         System.Random followUp = new System.Random();
         int follow = followUp.Next(chain);
@@ -171,7 +171,8 @@ public class OffenseScript : MonoBehaviour {
             //removing the rotation except for the X.
     }
 
-            System.Random followUp = new System.Random();
+        resetToDefault();
+        System.Random followUp = new System.Random();
         int follow = followUp.Next(chain);
         if (follow > chain * 3)
         {
@@ -227,6 +228,7 @@ public class OffenseScript : MonoBehaviour {
             //removing the rotation except for the X.
         }
         int rand;
+        resetToDefault();
         System.Random rnd = new System.Random();
         rand = rnd.Next(3);
         if (rand == 0)
@@ -289,6 +291,7 @@ public class OffenseScript : MonoBehaviour {
             //This one just moves it forward to stab.
         }
 
+        resetToDefault();
 
         System.Random followUp = new System.Random();
         int follow = followUp.Next(score);
@@ -360,6 +363,7 @@ public class OffenseScript : MonoBehaviour {
             //removing the rotation except for the X.
         }
 
+        resetToDefault();
         System.Random followUp = new System.Random();
         int follow = followUp.Next(score);
         if (follow > chain * 3)
@@ -431,6 +435,7 @@ public class OffenseScript : MonoBehaviour {
             //So I need to figure out which axis I need to rotate around I assume X, so I'm
             //removing the rotation except for the X.
         }
+        resetToDefault();
         System.Random followUp = new System.Random();
         int follow = followUp.Next(score);
         if (follow > chain * 3)
@@ -491,6 +496,7 @@ public class OffenseScript : MonoBehaviour {
             //So I need to figure out which axis I need to rotate around I assume X, so I'm
             //removing the rotation except for the X.
         }
+        resetToDefault();
         System.Random followUp = new System.Random();
         int follow = followUp.Next(score);
         if (follow > chain*3)
@@ -547,6 +553,8 @@ public class OffenseScript : MonoBehaviour {
         //Reset position to normal position forcibly
         transform.position = new Vector3(.53f,.87f,0.0f);
         transform.rotation = new Quaternion(0.0f,0.0f,0.0f,0.0f);
+
+        reset.Play();
 
     }
 }
