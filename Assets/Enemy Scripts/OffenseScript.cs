@@ -73,39 +73,7 @@ public class OffenseScript : MonoBehaviour {
 	}
     void SlashLeft()
     {
-        float startTime = Time.deltaTime;
-        while (Time.deltaTime < startTime + 3)
-        {
-            //Here, take 5 seconds to put sword back in place. Probably too long.
-            /*
-            transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
-                transform.position.y - transform.position.y / 2 + .87f,
-                transform.position.z - transform.position.z / 2);
-            */
-
-            transform.rotation = new Quaternion(transform.rotation.x + 30,
-                transform.rotation.y,
-                transform.rotation.z,
-                transform.rotation.w);
-            //So I need to figure out which axis I need to rotate around I assume X, so I'm
-            //removing the rotation except for the X.
-        }
-        while (Time.deltaTime < startTime + 3)
-        {
-            //Here, take 5 seconds to put sword back in place. Probably too long.
-            /*
-            transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
-                transform.position.y - transform.position.y / 2 + .87f,
-                transform.position.z - transform.position.z / 2);
-            */
-
-            transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x / 2,
-                transform.rotation.y,
-                transform.rotation.z,
-                transform.rotation.w);
-            //So I need to figure out which axis I need to rotate around I assume X, so I'm
-            //removing the rotation except for the X.
-        }
+        leftSlash.Play();
 
         resetToDefault();
         score += 1;
@@ -153,23 +121,7 @@ public class OffenseScript : MonoBehaviour {
 
         //This should just be a downward chop.
         score += 1;
-        float startTime = Time.deltaTime;
-        while (Time.deltaTime < startTime + 3)
-        {
-            //Here, take 5 seconds to put sword back in place. Probably too long.
-            /*
-            transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
-                transform.position.y - transform.position.y / 2 + .87f,
-                transform.position.z - transform.position.z / 2);
-            */
-
-            transform.rotation = new Quaternion(transform.rotation.x,
-                transform.rotation.y,
-                transform.rotation.z + 30,
-                transform.rotation.w);
-            //So I need to figure out which axis I need to rotate around I assume X, so I'm
-            //removing the rotation except for the X.
-    }
+        chop.Play();
 
         resetToDefault();
         System.Random followUp = new System.Random();
@@ -210,23 +162,6 @@ public class OffenseScript : MonoBehaviour {
     void Thrust()
     {
         score += 3;
-        float startTime = Time.deltaTime;
-        while (Time.deltaTime < startTime + 1)
-        {
-            //Here, take 5 seconds to put sword back in place. Probably too long.
-            /*
-            transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
-                transform.position.y - transform.position.y / 2 + .87f,
-                transform.position.z - transform.position.z / 2);
-            */
-
-            transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x / 2,
-                transform.rotation.y,
-                transform.rotation.z,
-                transform.rotation.w);
-            //So I need to figure out which axis I need to rotate around I assume X, so I'm
-            //removing the rotation except for the X.
-        }
         int rand;
         resetToDefault();
         System.Random rnd = new System.Random();
@@ -234,61 +169,17 @@ public class OffenseScript : MonoBehaviour {
         if (rand == 0)
         {
             //Thrust High
-            while (Time.deltaTime < startTime + 3)
-            {
-                //Here, take 5 seconds to put sword back in place. Probably too long.
-                transform.position = new Vector3(transform.position.x,
-                    transform.position.y + .2f / 3f,
-                    transform.position.z + .2f / 3f);
-
-                transform.rotation = new Quaternion(transform.rotation.x,
-                    transform.rotation.y,
-                    transform.rotation.z + 30f,
-                    transform.rotation.w);
-                //So I need to figure out which axis I need to rotate around I assume X, so I'm
-                //removing the rotation except for the X.
-            }
+            highThrust.Play();
         }
         else if(rand == 1)
         {
             //Thrust Mid
-            while (Time.deltaTime < startTime + 3)
-            {
-                //Here, take 5 seconds to put sword back in place. Probably too long.
-                transform.position = new Vector3(transform.position.x,
-                    transform.position.y,
-                    transform.position.z + .2f / 3f);
-                transform.rotation = new Quaternion(transform.rotation.x,
-                    transform.rotation.y,
-                    transform.rotation.z + 30f,
-                    transform.rotation.w);
-                //So I need to figure out which axis I need to rotate around I assume X, so I'm
-                //removing the rotation except for the X.
-            }
+            medThrust.Play();
         }
         else
         {
             //Thrust Low
-            while (Time.deltaTime < startTime + 3)
-            {
-                //Here, take 5 seconds to put sword back in place. Probably too long.
-                transform.position = new Vector3(transform.position.x,
-                    transform.position.y - .3f / 3f,
-                    transform.position.z + .2f / 3f);
-                transform.rotation = new Quaternion(transform.rotation.x,
-                    transform.rotation.y,
-                    transform.rotation.z + 30f,
-                    transform.rotation.w);
-                //So I need to figure out which axis I need to rotate around I assume X, so I'm
-                //removing the rotation except for the X.
-            }
-        }
-        while (Time.deltaTime < startTime + 5)
-        {
-            transform.position = new Vector3(transform.position.x,
-                transform.position.y,
-                transform.position.z - 1.45f / 2f);
-            //This one just moves it forward to stab.
+            lowThrust.Play();
         }
 
         resetToDefault();
@@ -329,39 +220,7 @@ public class OffenseScript : MonoBehaviour {
     void SlashLeftQuick()
     {
         score += 2;
-        float startTime = Time.deltaTime;
-        while (Time.deltaTime < startTime + 1)
-        {
-            //Here, take 5 seconds to put sword back in place. Probably too long.
-            /*
-            transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
-                transform.position.y - transform.position.y / 2 + .87f,
-                transform.position.z - transform.position.z / 2);
-            */
-
-            transform.rotation = new Quaternion(transform.rotation.x + 45,
-                transform.rotation.y,
-                transform.rotation.z,
-                transform.rotation.w);
-            //So I need to figure out which axis I need to rotate around I assume X, so I'm
-            //removing the rotation except for the X.
-        }
-        while (Time.deltaTime < startTime + 3)
-        {
-            //Here, take 5 seconds to put sword back in place. Probably too long.
-            /*
-            transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
-                transform.position.y - transform.position.y / 2 + .87f,
-                transform.position.z - transform.position.z / 2);
-            */
-
-            transform.rotation = new Quaternion(transform.rotation.x - 135/3,
-                transform.rotation.y,
-                transform.rotation.z,
-                transform.rotation.w);
-            //So I need to figure out which axis I need to rotate around I assume X, so I'm
-            //removing the rotation except for the X.
-        }
+        leftSlashQuick.Play();
 
         resetToDefault();
         System.Random followUp = new System.Random();
@@ -402,39 +261,7 @@ public class OffenseScript : MonoBehaviour {
     void SlashRight()
     {
         score += 1;
-
-        while (Time.deltaTime < startTime + 3)
-        {
-            //Here, take 5 seconds to put sword back in place. Probably too long.
-            /*
-            transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
-                transform.position.y - transform.position.y / 2 + .87f,
-                transform.position.z - transform.position.z / 2);
-            */
-
-            transform.rotation = new Quaternion(transform.rotation.x + 30,
-                transform.rotation.y,
-                transform.rotation.z,
-                transform.rotation.w);
-            //So I need to figure out which axis I need to rotate around I assume X, so I'm
-            //removing the rotation except for the X.
-        }
-        while (Time.deltaTime < startTime + 3)
-        {
-            //Here, take 5 seconds to put sword back in place. Probably too long.
-            /*
-            transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
-                transform.position.y - transform.position.y / 2 + .87f,
-                transform.position.z - transform.position.z / 2);
-            */
-
-            transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x / 2,
-                transform.rotation.y,
-                transform.rotation.z,
-                transform.rotation.w);
-            //So I need to figure out which axis I need to rotate around I assume X, so I'm
-            //removing the rotation except for the X.
-        }
+        rightSlash.Play();
         resetToDefault();
         System.Random followUp = new System.Random();
         int follow = followUp.Next(score);
@@ -478,24 +305,8 @@ public class OffenseScript : MonoBehaviour {
     void SlashRightQuick()
     {
         score += 2;
-
-        float startTime = Time.deltaTime;
-        while (Time.deltaTime < startTime + 1)
-        {
-            //Here, take 5 seconds to put sword back in place. Probably too long.
-            /*
-            transform.position = new Vector3(transform.position.x - transform.position.x / 2 + .53f,
-                transform.position.y - transform.position.y / 2 + .87f,
-                transform.position.z - transform.position.z / 2);
-            */
-
-            transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x / 2,
-                transform.rotation.y,
-                transform.rotation.z,
-                transform.rotation.w);
-            //So I need to figure out which axis I need to rotate around I assume X, so I'm
-            //removing the rotation except for the X.
-        }
+        
+        rightSlashQuick.Play();
         resetToDefault();
         System.Random followUp = new System.Random();
         int follow = followUp.Next(score);
@@ -535,24 +346,6 @@ public class OffenseScript : MonoBehaviour {
 
     void resetToDefault()
     {
-        float startTime = Time.deltaTime;
-        //Put the enemy's sword position back to the default position.
-        while (Time.deltaTime < startTime+5)
-        {
-            //Here, take 5 seconds to put sword back in place. Probably too long.
-            transform.position = new Vector3(transform.position.x - transform.position.x/5 + .53f, 
-                transform.position.y - transform.position.y/5+ .87f, 
-                transform.position.z - transform.position.z/5);
-
-            transform.rotation = new Quaternion(transform.rotation.x - transform.rotation.x/5,
-                transform.rotation.y - transform.rotation.y/5,
-                transform.rotation.z - transform.rotation.z/5,
-                transform.rotation.w - transform.rotation.w/5);
-
-        }
-        //Reset position to normal position forcibly
-        transform.position = new Vector3(.53f,.87f,0.0f);
-        transform.rotation = new Quaternion(0.0f,0.0f,0.0f,0.0f);
 
         reset.Play();
 
