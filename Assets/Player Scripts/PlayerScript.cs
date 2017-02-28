@@ -50,4 +50,13 @@ public class PlayerScript : MonoBehaviour {
         }
 
     }
+    void onCollisionEnter(Collision UI, Collision col)
+    {
+        if (col.gameObject.name == "Enemy")
+        {
+            //Subtract health
+            blockSound.Play();
+        }
+
+    }
 }
