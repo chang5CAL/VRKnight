@@ -26,6 +26,7 @@ public class OffenseScript : MonoBehaviour {
     public Animation highThrust;
     public Animation medThrust;
     public Animation lowThrust;
+    public AudioSource blockSound;
 
     // Use this for initialization
     void Start () {
@@ -348,6 +349,15 @@ public class OffenseScript : MonoBehaviour {
     {
 
         reset.Play();
+
+    }
+    void onCollisionEnter(Collision col)
+    {
+        if (col.gameObject.name == "UI")
+        {
+            //Subtract health
+            blockSound.Play();
+        }
 
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
     int hp;
     public AudioSource hitSound;
-    public AudioSource blockSound;
     public Texture2D crosshair;
     // Use this for initialization
     void Start ()
@@ -47,15 +46,6 @@ public class PlayerScript : MonoBehaviour {
             //Subtract health
             hp--;
             hitSound.Play();
-        }
-
-    }
-    void onCollisionEnter(Collision UI, Collision col)
-    {
-        if (col.gameObject.name == "Enemy")
-        {
-            //Subtract health
-            blockSound.Play();
         }
 
     }
