@@ -26,6 +26,7 @@ public class OffenseScript : MonoBehaviour {
     public Animation highThrust;
     public Animation medThrust;
     public Animation lowThrust;
+    public Animation deflect;
     public AudioSource blockSound;
 
     // Use this for initialization
@@ -357,6 +358,7 @@ public class OffenseScript : MonoBehaviour {
         {
             //Subtract health
             blockSound.Play();
+            deflect.Play();
         }
 
     }
