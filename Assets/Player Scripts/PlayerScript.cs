@@ -46,7 +46,15 @@ public class PlayerScript : MonoBehaviour {
             //Subtract health
             hp--;
             hitSound.Play();
+            onHit();
         }
+
+    }
+
+    void onHit()
+    {
+        //Shake the camera a bit, or do something to indicate the player's been hit
+        //For instance, screen turns red for a bit.
 
     }
 }

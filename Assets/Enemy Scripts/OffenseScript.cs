@@ -358,6 +358,7 @@ public class OffenseScript : MonoBehaviour {
         {
             //Subtract health
             blockSound.Play();
+            //Need to stop whatever animation.
             deflect.Play();
         }
 
