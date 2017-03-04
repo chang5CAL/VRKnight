@@ -6,6 +6,7 @@ public class PlayerScript : MonoBehaviour {
     int hp;
     public AudioSource hitSound;
     public Texture2D crosshair;
+    public Texture2D bloodSplatter;
     // Use this for initialization
     void Start ()
     {
@@ -55,6 +56,7 @@ public class PlayerScript : MonoBehaviour {
     {
         //Shake the camera a bit, or do something to indicate the player's been hit
         //For instance, screen turns red for a bit.
+        GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), bloodSplatter);
 
     }
 }
