@@ -60,7 +60,7 @@ public class PlayerScript : MonoBehaviour {
         float startTime = Time.time;
         while(Time.time + 1 < startTime)
         {
-            //Make the screen flash red then go transparent.
+            //Make the screen flash red then go transparent.git
         }
     }
 }
