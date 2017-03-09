@@ -38,35 +38,43 @@ public class OffenseScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        print("Time: "+Time.time);
         int rand;
         System.Random rnd = new System.Random();
-		if (Time.fixedDeltaTime % 5 == 0)
+		if ((int)Time.time % 5 == 0)
         {
+            print("Using an attack");
             chain++;
             isActive = true;
             rand = rnd.Next(6);
             if (rand == 0)
             {
+                print("Slashing Left");
                 SlashLeft();
             }
             else if (rand == 1)
             {
+                print("Thrusting");
                 Thrust();
             }
             else if (rand == 2)
             {
+                print("Slashing Left Quickly");
                 SlashLeftQuick();
             }
             else if (rand == 3)
             {
+                print("Slashing Right");
                 SlashRight();
             }
             else if (rand == 4)
             {
+                print("Slashing Right Quickly");
                 SlashRightQuick();
             }
             else if (rand == 6)
             {
+                print("Chopping");
                 Chop();
             }
             //Do an attack.
