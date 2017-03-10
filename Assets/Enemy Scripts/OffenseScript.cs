@@ -28,12 +28,14 @@ public class OffenseScript : MonoBehaviour {
     public Animation lowThrust;
     public Animation deflect;
     public AudioSource blockSound;
+    int hitTime;
 
     // Use this for initialization
     void Start () {
         isActive = false;
         coolDown = false; //If the player is hit, set to true.
         chain = 0;
+        hitTime = 5;
 	}
 	
 	// Update is called once per frame
@@ -41,8 +43,16 @@ public class OffenseScript : MonoBehaviour {
         print("Time: "+Time.time);
         int rand;
         System.Random rnd = new System.Random();
-		if ((int)Time.time % 5 == 0)
+		if ((int)Time.time % 10 == hitTime)
         {
+            if (hitTime == 5)
+            {
+                hitTime = 0;
+            }
+            else
+            {
+                hitTime = 5;
+            }
             print("Using an attack");
             chain++;
             isActive = true;
@@ -72,7 +82,7 @@ public class OffenseScript : MonoBehaviour {
                 print("Slashing Right Quickly");
                 SlashRightQuick();
             }
-            else if (rand == 6)
+            else if (rand == 5)
             {
                 print("Chopping");
                 Chop();
