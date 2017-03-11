@@ -90,6 +90,7 @@ public class OffenseScript : MonoBehaviour {
             //Do an attack.
         }
         isActive = false;
+        chain = 0;
 	}
     void SlashLeft()
     {
