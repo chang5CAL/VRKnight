@@ -43,8 +43,9 @@ public class OffenseScript : MonoBehaviour {
         print("Time: "+Time.time);
         int rand;
         System.Random rnd = new System.Random();
-		if ((int)Time.time % 10 == hitTime)
+		if ((int)Time.time % 10 == hitTime && isActive == false)
         {
+            //Another thing is that if it keeps chaining, don't start a new loop.
             if (hitTime == 5)
             {
                 hitTime = 0;
