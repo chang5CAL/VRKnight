@@ -43,7 +43,7 @@ public class OffenseScript : MonoBehaviour {
         print("Time: "+Time.time);
         int rand;
         System.Random rnd = new System.Random();
-		if ((int)Time.time % 10 == hitTime && isActive == false)
+		if ((int)Time.time % 10 == hitTime)
         {
             //Another thing is that if it keeps chaining, don't start a new loop.
             if (hitTime == 5)
@@ -89,14 +89,17 @@ public class OffenseScript : MonoBehaviour {
                 Chop();
             }
             //Do an attack.
+
+            //Reset chain and isActive
+            isActive = false;
+            chain = 0;
         }
-        isActive = false;
-        chain = 0;
 	}
     void SlashLeft()
     {
+        isActive = true;
         leftSlash.Play();
-
+        isActive = false;
         resetToDefault();
         score += 1;
         System.Random followUp = new System.Random();
@@ -143,7 +146,9 @@ public class OffenseScript : MonoBehaviour {
 
         //This should just be a downward chop.
         score += 1;
+        isActive = true;
         chop.Play();
+        isActive = false;
 
         resetToDefault();
         System.Random followUp = new System.Random();
@@ -188,6 +193,7 @@ public class OffenseScript : MonoBehaviour {
         resetToDefault();
         System.Random rnd = new System.Random();
         rand = rnd.Next(3);
+        isActive = true;
         if (rand == 0)
         {
             //Thrust High
@@ -203,6 +209,7 @@ public class OffenseScript : MonoBehaviour {
             //Thrust Low
             lowThrust.Play();
         }
+        isActive = false;
 
         resetToDefault();
 
@@ -242,7 +249,9 @@ public class OffenseScript : MonoBehaviour {
     void SlashLeftQuick()
     {
         score += 2;
+        isActive = true;
         leftSlashQuick.Play();
+        isActive = false;
 
         resetToDefault();
         System.Random followUp = new System.Random();
@@ -283,7 +292,9 @@ public class OffenseScript : MonoBehaviour {
     void SlashRight()
     {
         score += 1;
+        isActive = true;
         rightSlash.Play();
+        isActive = false;
         resetToDefault();
         System.Random followUp = new System.Random();
         int follow = followUp.Next(score);
@@ -327,8 +338,10 @@ public class OffenseScript : MonoBehaviour {
     void SlashRightQuick()
     {
         score += 2;
-        
+
+        isActive = true;
         rightSlashQuick.Play();
+        isActive = false;
         resetToDefault();
         System.Random followUp = new System.Random();
         int follow = followUp.Next(score);
