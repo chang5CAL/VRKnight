@@ -46,13 +46,17 @@ public class OffenseScript : MonoBehaviour {
 		if ((int)Time.time % 10 == hitTime)
         {
             //Another thing is that if it keeps chaining, don't start a new loop.
-            if (hitTime == 5)
+            if (hitTime == 5 && Time.time < 60)
             {
                 hitTime = 0;
             }
-            else
+            else if (hitTime == 0 && Time.time < 60)
             {
                 hitTime = 5;
+            }
+            else
+            {
+                hitTime = (hitTime + 3) % 10; //So after a minute, make it hit once every 3 seconds.
             }
             print("Using an attack");
             chain++;
