@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
     int hp;
     public AudioSource hitSound;
-    public Texture2D crosshair;
     public Texture2D bloodSplatter;
     // Use this for initialization
     void Start ()
@@ -25,13 +24,6 @@ public class PlayerScript : MonoBehaviour {
         }
 
     }
-    void OnGUI()
-    {
-        float xMin = (Screen.width / 2) - (crosshair.width / 2);
-        float yMin = (Screen.height / 2) - (crosshair.height / 2);
-        GUI.DrawTexture(new Rect(xMin, yMin, crosshair.width, crosshair.height), crosshair);
-    }
-
     void resetGame()
     {
         //Open up a GUI that let's the player do things
