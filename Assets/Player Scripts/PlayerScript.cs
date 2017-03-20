@@ -48,11 +48,14 @@ public class PlayerScript : MonoBehaviour {
     {
         //Shake the camera a bit, or do something to indicate the player's been hit
         //For instance, screen turns red for a bit.
-        GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), bloodSplatter);
+        GUI.backgroundColor = new Color(255, 0, 0);
         float startTime = Time.time;
         while(Time.time + 1 < startTime)
         {
-            //Make the screen flash red then go transparent.git
+
+            GUI.backgroundColor = new Color(255, 0, 0);
+            //Make the screen flash red then go transparent.
         }
+        GUI.backgroundColor = new Color(0, 0, 0);
     }
 }
