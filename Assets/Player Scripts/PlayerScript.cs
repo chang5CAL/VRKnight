@@ -53,7 +53,7 @@ public class PlayerScript : MonoBehaviour {
         while(Time.time + 1 < startTime)
         {
 
-            GUI.backgroundColor = new Color(255, 0, 0);
+            GUI.backgroundColor = new Color(255-(startTime - Time.time)*255, 0, 0);
             //Make the screen flash red then go transparent.
         }
         GUI.backgroundColor = new Color(0, 0, 0);
