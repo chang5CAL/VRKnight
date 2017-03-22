@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
     int hp;
+    int score;
     public AudioSource hitSound;
     public Texture2D bloodSplatter;
     // Use this for initialization
@@ -16,6 +17,7 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        score = (int)Time.time;
         //transform.LookAt(Input.mousePosition);
         if (hp <= 0)
         {
@@ -30,6 +32,7 @@ public class PlayerScript : MonoBehaviour {
         //On reset:
         hp = 3;
         //On Main menu
+        score = 0;
     }
     
     void onCollisionEnter(Collision col)
