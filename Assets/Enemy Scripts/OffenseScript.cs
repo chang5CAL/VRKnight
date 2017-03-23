@@ -16,7 +16,6 @@ public class OffenseScript : MonoBehaviour {
     int chain;
     int followUp;
     bool coolDown;
-    public int score;
     public Animation reset;
     public Animation leftSlash;
     public Animation rightSlash;
@@ -105,7 +104,6 @@ public class OffenseScript : MonoBehaviour {
         leftSlash.Play();
         isActive = false;
         resetToDefault();
-        score += 1;
         System.Random followUp = new System.Random();
         int follow = followUp.Next(chain);
         if (follow > chain * 3)
@@ -149,7 +147,6 @@ public class OffenseScript : MonoBehaviour {
     {
 
         //This should just be a downward chop.
-        score += 1;
         isActive = true;
         chop.Play();
         isActive = false;
@@ -192,7 +189,6 @@ public class OffenseScript : MonoBehaviour {
     }
     void Thrust()
     {
-        score += 3;
         int rand;
         resetToDefault();
         System.Random rnd = new System.Random();
@@ -218,7 +214,7 @@ public class OffenseScript : MonoBehaviour {
         resetToDefault();
 
         System.Random followUp = new System.Random();
-        int follow = followUp.Next(score);
+        int follow = followUp.Next(5);
         if (follow > chain * 3)
         {
             chain++;
@@ -252,14 +248,13 @@ public class OffenseScript : MonoBehaviour {
     }
     void SlashLeftQuick()
     {
-        score += 2;
         isActive = true;
         leftSlashQuick.Play();
         isActive = false;
 
         resetToDefault();
         System.Random followUp = new System.Random();
-        int follow = followUp.Next(score);
+        int follow = followUp.Next(5);
         if (follow > chain * 3)
         {
             chain++;
@@ -295,13 +290,12 @@ public class OffenseScript : MonoBehaviour {
     }
     void SlashRight()
     {
-        score += 1;
         isActive = true;
         rightSlash.Play();
         isActive = false;
         resetToDefault();
         System.Random followUp = new System.Random();
-        int follow = followUp.Next(score);
+        int follow = followUp.Next(5);
         if (follow > chain * 3)
         {
             //Basically, get a random number and if it divided by the chain 
@@ -341,14 +335,12 @@ public class OffenseScript : MonoBehaviour {
     }
     void SlashRightQuick()
     {
-        score += 2;
-
         isActive = true;
         rightSlashQuick.Play();
         isActive = false;
         resetToDefault();
         System.Random followUp = new System.Random();
-        int follow = followUp.Next(score);
+        int follow = followUp.Next(5);
         if (follow > chain*3)
         {
             chain++;
