@@ -105,7 +105,7 @@ public class OffenseScript : MonoBehaviour {
         isActive = false;
         resetToDefault();
         System.Random followUp = new System.Random();
-        int follow = followUp.Next(chain);
+        int follow = followUp.Next((int)Time.time);
         if (follow > chain * 3)
         {
             //Basically, get a random number and if it divided by the chain 
@@ -153,7 +153,7 @@ public class OffenseScript : MonoBehaviour {
 
         resetToDefault();
         System.Random followUp = new System.Random();
-        int follow = followUp.Next(chain);
+        int follow = followUp.Next((int)Time.time);
         if (follow > chain * 3)
         {
             chain++;
@@ -214,7 +214,7 @@ public class OffenseScript : MonoBehaviour {
         resetToDefault();
 
         System.Random followUp = new System.Random();
-        int follow = followUp.Next(5);
+        int follow = followUp.Next((int)Time.time);
         if (follow > chain * 3)
         {
             chain++;
@@ -254,7 +254,7 @@ public class OffenseScript : MonoBehaviour {
 
         resetToDefault();
         System.Random followUp = new System.Random();
-        int follow = followUp.Next(5);
+        int follow = followUp.Next((int)Time.time);
         if (follow > chain * 3)
         {
             chain++;
@@ -295,7 +295,7 @@ public class OffenseScript : MonoBehaviour {
         isActive = false;
         resetToDefault();
         System.Random followUp = new System.Random();
-        int follow = followUp.Next(5);
+        int follow = followUp.Next((int)Time.time);
         if (follow > chain * 3)
         {
             //Basically, get a random number and if it divided by the chain 
@@ -340,7 +340,7 @@ public class OffenseScript : MonoBehaviour {
         isActive = false;
         resetToDefault();
         System.Random followUp = new System.Random();
-        int follow = followUp.Next(5);
+        int follow = followUp.Next((int)Time.time);
         if (follow > chain*3)
         {
             chain++;
