@@ -61,9 +61,5 @@ public class PlayerScript : MonoBehaviour {
         }
         GUI.backgroundColor = new Color(0, 0, 0);
     }
-
-    void onControllerUpdateEvent()
-    {
-
-    }
+    
 }
