@@ -37,7 +37,7 @@ public class PlayerScript : MonoBehaviour {
     
     void onCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "Enemy")
+        if (col.gameObject.name == "EnemyWeapon")
         {
             //Subtract health
             hp--;
