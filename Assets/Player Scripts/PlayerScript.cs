@@ -7,6 +7,7 @@ public class PlayerScript : MonoBehaviour {
     int score;
     public AudioSource hitSound;
     public Texture2D bloodSplatter;
+    public event onOver;
     // Use this for initialization
     void Start ()
     {
