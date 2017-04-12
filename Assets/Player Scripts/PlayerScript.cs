@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerScript : MonoBehaviour {
+public class PlayerScript : MonoBehaviour
+{
+    public delegate void Action();
     int hp;
     int score;
     public AudioSource hitSound;
     public Texture2D bloodSplatter;
-    public event onOver;
+    public event Action onOver;
     // Use this for initialization
     void Start ()
     {
