@@ -17,10 +17,6 @@ public class PlayerScript : MonoBehaviour
 
     }
 	
-    public bool IsOver
-    {
-        get { return m_isOver; }
-    }
 
 	// Update is called once per frame
 	void Update ()
