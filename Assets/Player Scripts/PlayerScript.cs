@@ -21,6 +21,15 @@ public class PlayerScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        print("Firing rays");
+        print(ray.direction);
+        if (Physics.Raycast(ray,out hit, 2f))
+        {
+            //Perform action.
+            print("Ray Hit");
+        }
         score = (int)Time.time;
         //transform.LookAt(Input.mousePosition);
         if (hp <= 0)
