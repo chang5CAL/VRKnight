@@ -100,7 +100,7 @@ public class OffenseScript : MonoBehaviour {
         }
 	}
 
-    void intercepted(){
+    void onCollisionEnter(Ray ray){
         if (isActive)
         {
             //Make animation stop
