@@ -39,7 +39,6 @@ public class OffenseScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        intercepted();
         print("Time: "+Time.time);
         int rand;
         System.Random rnd = new System.Random();
