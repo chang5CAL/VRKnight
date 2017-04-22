@@ -39,7 +39,6 @@ public class OffenseScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        print("Time: "+Time.time);
         int rand;
         System.Random rnd = new System.Random();
 		if ((int)Time.time % 10 == hitTime)
@@ -57,38 +56,31 @@ public class OffenseScript : MonoBehaviour {
             {
                 hitTime = (hitTime + 3) % 10; //So after a minute, make it hit once every 3 seconds.
             }
-            print("Using an attack");
             chain++;
             isActive = true;
             rand = rnd.Next(6);
             if (rand == 0)
             {
-                print("Slashing Left");
                 SlashLeft();
             }
             else if (rand == 1)
             {
-                print("Thrusting");
                 Thrust();
             }
             else if (rand == 2)
             {
-                print("Slashing Left Quickly");
                 SlashLeftQuick();
             }
             else if (rand == 3)
             {
-                print("Slashing Right");
                 SlashRight();
             }
             else if (rand == 4)
             {
-                print("Slashing Right Quickly");
                 SlashRightQuick();
             }
             else if (rand == 5)
             {
-                print("Chopping");
                 Chop();
             }
             //Do an attack.
@@ -392,8 +384,10 @@ public class OffenseScript : MonoBehaviour {
     }
     void onCollisionEnter(Collision col)
     {
+        print("Ray collision");
         if (col.gameObject.name == "UI")
         {
+            print("Performing Collision Actions");
             //Subtract health
             blockSound.Play();
             //Need to stop whatever animation.
