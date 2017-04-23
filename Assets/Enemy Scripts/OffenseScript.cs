@@ -385,9 +385,9 @@ public class OffenseScript : MonoBehaviour {
     void onCollisionEnter(Collision col)
     {
         print("Ray collision");
-        if (col.gameObject.name == "UI")
+        if (col.gameObject.name == "ray")
         {
-            print("Performing Collision Actions");
+            print("Performing Collision Actions ");
             //Subtract health
             blockSound.Play();
             //Need to stop whatever animation.
