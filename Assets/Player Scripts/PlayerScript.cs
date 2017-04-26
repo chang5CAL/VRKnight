@@ -23,8 +23,6 @@ public class PlayerScript : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        print("Firing rays");
-        print(ray.direction);
         if (Physics.Raycast(ray,out hit, 2f))
         {
             //Perform action.

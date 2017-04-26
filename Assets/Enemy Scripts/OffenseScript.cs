@@ -384,7 +384,7 @@ public class OffenseScript : MonoBehaviour {
     }
     void onCollisionEnter(Collision col)
     {
-        print("Ray collision");
+        print("Collision");
         if (col.gameObject.name == "collisionRay")
         {
             print("Performing Collision Actions ");
