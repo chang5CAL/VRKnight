@@ -385,7 +385,7 @@ public class OffenseScript : MonoBehaviour {
     void onCollisionEnter(Collision col)
     {
         print("Ray collision");
-        if (col.gameObject.name == "ray")
+        if (col.gameObject.name == "collisionRay")
         {
             print("Performing Collision Actions ");
             //Subtract health
