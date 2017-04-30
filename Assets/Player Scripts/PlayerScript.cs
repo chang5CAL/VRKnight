@@ -39,11 +39,18 @@ public class PlayerScript : MonoBehaviour
     }
     void resetGame()
     {
+        bool reset = false;
         //Open up a GUI that let's the player do things
         //On reset:
-        hp = 3;
-        //On Main menu
-        score = 0;
+        if (reset)
+        {
+            hp = 3;
+            //On Main menu
+            score = 0;
+        } else
+        {
+            //Quit game
+        }
     }
     
     void onCollisionEnter(Collision col)

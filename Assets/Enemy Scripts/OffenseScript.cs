@@ -388,9 +388,7 @@ public class OffenseScript : MonoBehaviour {
         if (col.gameObject.name == "collisionRay")
         {
             print("Performing Collision Actions ");
-            //Subtract health
             blockSound.Play();
-            //Need to stop whatever animation.
             deflect.Play();
         }
 
