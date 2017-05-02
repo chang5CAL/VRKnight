@@ -24,6 +24,7 @@ public class PlayerScript : MonoBehaviour
         Vector3 front = transform.eulerAngles;
         Ray ray = Camera.main.ScreenPointToRay(front);
         RaycastHit hit;
+        print(ray.GetPoint(2.79f));
         if (Physics.Raycast(ray,out hit, 10f))
         {
             //Perform action.
