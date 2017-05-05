@@ -21,11 +21,10 @@ public class PlayerScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        Vector3 front = transform.eulerAngles;
+        Vector3 front = transform.TransformDirection(Vector3.forward);
         Ray ray = Camera.main.ScreenPointToRay(front);
         RaycastHit hit;
-        print(ray.GetPoint(2.79f));
-        if (Physics.Raycast(ray,out hit, 10f))
+        if (Physics.Raycast(transform.position,front,out hit))
         {
             //Perform action.
             print("Ray Hit");
