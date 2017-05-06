@@ -382,15 +382,4 @@ public class OffenseScript : MonoBehaviour {
         reset.Play();
 
     }
-    void onCollisionEnter(Collision col)
-    {
-        print("Collision");
-        if (col.gameObject.name == "collisionRay")
-        {
-            print("Performing Collision Actions ");
-            blockSound.Play();
-            deflect.Play();
-        }
-
-    }
 }

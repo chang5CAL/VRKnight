@@ -26,8 +26,11 @@ public class PlayerScript : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position,front,out hit))
         {
-            //Perform action.
             print("Ray Hit");
+            if (hit.collider.tag == "EnemyWeapon")
+            {
+                //Cancel AI's attack
+            }
         }
         score = (int)Time.time;
         //transform.LookAt(Input.mousePosition);
