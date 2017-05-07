@@ -91,14 +91,18 @@ public class OffenseScript : MonoBehaviour {
         }
 	}
 
-    void onCollisionEnter(Ray ray){
+
+    public void deflectCheck()
+    {
         if (isActive)
         {
             //Make animation stop
             blockSound.Play();
             deflect.Play();
         }
+
     }
+
     void SlashLeft()
     {
         isActive = true;
