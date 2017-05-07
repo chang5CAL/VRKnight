@@ -29,7 +29,9 @@ public class PlayerScript : MonoBehaviour
             if (hit.collider.tag == "EnemyWeapon")
             {
                 print("Registered hit on weapon");
-                hit.collider.GetComponentsInParent<"EnemyWeapon">;
+                GameObject enemy = GameObject.Find("Enemy");
+                OffenseScript s = (OffenseScript) enemy.GetComponent(typeof(OffenseScript));
+                s.deflectCheck();
                 //Cancel AI's attack
             }
         }
