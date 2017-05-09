@@ -28,6 +28,8 @@ public class PlayerScript : MonoBehaviour
         {
             if (hit.collider.tag == "EnemyWeapon")
             {
+                GameObject crosshair = GameObject.Find("EventSystem");
+                
                 print("Registered hit on weapon");
                 GameObject enemy = GameObject.Find("Enemy");
                 OffenseScript s = (OffenseScript) enemy.GetComponent(typeof(OffenseScript));
