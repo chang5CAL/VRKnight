@@ -29,12 +29,13 @@ public class PlayerScript : MonoBehaviour
             if (hit.collider.tag == "EnemyWeapon")
             {
                 GameObject crosshair = GameObject.Find("EventSystem");
-                
-                print("Registered hit on weapon");
-                GameObject enemy = GameObject.Find("Enemy");
-                OffenseScript s = (OffenseScript) enemy.GetComponent(typeof(OffenseScript));
-                s.deflectCheck();
-                //Cancel AI's attack
+                if (crosshair) {
+                    print("Registered hit on weapon");
+                    GameObject enemy = GameObject.Find("Enemy");
+                    OffenseScript s = (OffenseScript)enemy.GetComponent(typeof(OffenseScript));
+                    s.deflectCheck();
+                    //Cancel AI's attack
+                }
             }
         }
         score = (int)Time.time;
