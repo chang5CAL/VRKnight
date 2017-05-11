@@ -27,10 +27,12 @@ public class OffenseScript : MonoBehaviour {
     public Animation lowThrust;
     public Animation deflect;
     public AudioSource blockSound;
+    public int score;
     int hitTime;
 
     // Use this for initialization
     void Start () {
+        score = 0;
         isActive = false;
         coolDown = false; //If the player is hit, set to true.
         chain = 0;
@@ -105,6 +107,7 @@ public class OffenseScript : MonoBehaviour {
 
     void SlashLeft()
     {
+        score = 1;
         isActive = true;
         leftSlash.Play();
         isActive = false;
@@ -150,6 +153,7 @@ public class OffenseScript : MonoBehaviour {
     }
     void Chop()
     {
+        score = 1;
 
         //This should just be a downward chop.
         isActive = true;
@@ -194,6 +198,7 @@ public class OffenseScript : MonoBehaviour {
     }
     void Thrust()
     {
+        score = 2;
         int rand;
         resetToDefault();
         System.Random rnd = new System.Random();
@@ -253,6 +258,7 @@ public class OffenseScript : MonoBehaviour {
     }
     void SlashLeftQuick()
     {
+        score = 2;
         isActive = true;
         leftSlashQuick.Play();
         isActive = false;
@@ -295,6 +301,7 @@ public class OffenseScript : MonoBehaviour {
     }
     void SlashRight()
     {
+        score = 1;
         isActive = true;
         rightSlash.Play();
         isActive = false;
@@ -340,6 +347,7 @@ public class OffenseScript : MonoBehaviour {
     }
     void SlashRightQuick()
     {
+        score = 2;
         isActive = true;
         rightSlashQuick.Play();
         isActive = false;
