@@ -22,7 +22,6 @@ public class PlayerScript : MonoBehaviour
 	void Update ()
     {
         Vector3 front = transform.TransformDirection(Vector3.forward);
-        Ray ray = Camera.main.ScreenPointToRay(front);
         RaycastHit hit;
         if (Physics.Raycast(transform.position,front,out hit))
         {
@@ -34,6 +33,10 @@ public class PlayerScript : MonoBehaviour
                     GameObject enemy = GameObject.Find("Enemy");
                     OffenseScript s = (OffenseScript)enemy.GetComponent(typeof(OffenseScript));
                     s.deflectCheck();
+                    /*if (s.deflectCheck())
+                    {
+                        score += s.score;
+                    }*/
                     //Cancel AI's attack
                 }
             }
