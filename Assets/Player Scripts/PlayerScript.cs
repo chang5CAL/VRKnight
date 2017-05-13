@@ -33,10 +33,10 @@ public class PlayerScript : MonoBehaviour
                     GameObject enemy = GameObject.Find("Enemy");
                     OffenseScript s = (OffenseScript)enemy.GetComponent(typeof(OffenseScript));
                     s.deflectCheck();
-                    /*if (s.deflectCheck())
+                    if (s.deflectCheck())
                     {
                         score += s.score;
-                    }*/
+                    }
                     //Cancel AI's attack
                 }
             }
