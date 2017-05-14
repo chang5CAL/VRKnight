@@ -23,25 +23,27 @@ public class PlayerScript : MonoBehaviour
     {
         Vector3 front = transform.TransformDirection(Vector3.forward);
         RaycastHit hit;
-        if (Physics.Raycast(transform.position,front,out hit))
+        if (Physics.Raycast(transform.position, front, out hit))
         {
             if (hit.collider.tag == "EnemyWeapon")
             {
                 GameObject crosshair = GameObject.Find("EventSystem");
-                if (crosshair) {
-                    print("Registered hit on weapon");
-                    GameObject enemy = GameObject.Find("Enemy");
-                    OffenseScript s = (OffenseScript)enemy.GetComponent(typeof(OffenseScript));
-                    s.deflectCheck();
-                    if (s.deflectCheck())
-                    {
-                        score += s.score;
-                    }
-                    //Cancel AI's attack
+                GameObject enemy = GameObject.Find("Enemy");
+                OffenseScript s = (OffenseScript)enemy.GetComponent(typeof(OffenseScript));
+                //Fill the circular marker
+                if (s.deflectCheck())
+                {
+                    //crosshair.fill();
                 }
+                if (crosshair)
+                {
+                    //If crosshair is full
+                    print("Registered hit on weapon");
+                    score += s.score;
+                }
+                //Cancel AI's attack
             }
         }
-        score = (int)Time.time;
         //transform.LookAt(Input.mousePosition);
         if (hp <= 0)
         {
