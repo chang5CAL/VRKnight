@@ -35,9 +35,10 @@ public class PlayerScript : MonoBehaviour
                 {
                     //crosshair.fill();
                 }
-                if (crosshair)
+                if (crosshair/*.full()*/)
                 {
                     //If crosshair is full
+                    //crosshair.empty()
                     print("Registered hit on weapon");
                     score += s.score;
                 }
