@@ -31,14 +31,11 @@ public class PlayerScript : MonoBehaviour
                 GameObject enemy = GameObject.Find("Enemy");
                 OffenseScript s = (OffenseScript)enemy.GetComponent(typeof(OffenseScript));
                 //Fill the circular marker
-                if (s.deflectCheck())
-                {
-                    //crosshair.fill();
-                }
                 if (crosshair/*.full()*/)
                 {
                     //If crosshair is full
                     //crosshair.empty()
+                    s.deflectCheck();
                     print("Registered hit on weapon");
                     score += s.score;
                 }
