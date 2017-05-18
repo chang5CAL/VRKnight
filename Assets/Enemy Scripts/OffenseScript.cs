@@ -94,16 +94,14 @@ public class OffenseScript : MonoBehaviour {
 	}
 
 
-    public bool deflectCheck()
+    public void deflectCheck()
     {
         if (isActive)
         {
             //Make animation stop
             blockSound.Play();
             deflect.Play();
-            return true;
         }
-        return false;
 
     }
 
