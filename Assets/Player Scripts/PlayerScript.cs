@@ -31,7 +31,7 @@ public class PlayerScript : MonoBehaviour
                 GameObject enemy = GameObject.Find("Enemy");
                 OffenseScript s = (OffenseScript)enemy.GetComponent(typeof(OffenseScript));
                 //Fill the circular marker
-                if (crosshair/*.full()*/)
+                if (crosshair.activeInHierarchy)
                 {
                     //If crosshair is full
                     //crosshair.empty()
