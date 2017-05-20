@@ -34,10 +34,10 @@ public class PlayerScript : MonoBehaviour
                 if (crosshair.activeInHierarchy)
                 {
                     //If crosshair is full
-                    //crosshair.empty()
                     s.deflectCheck();
                     print("Registered hit on weapon");
                     score += s.score;
+                    crosshair.SetActive;
                 }
                 //Cancel AI's attack
             }
