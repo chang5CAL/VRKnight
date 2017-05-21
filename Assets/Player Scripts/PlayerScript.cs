@@ -37,7 +37,7 @@ public class PlayerScript : MonoBehaviour
                     s.deflectCheck();
                     print("Registered hit on weapon");
                     score += s.score;
-                    crosshair.SetActive;
+                    //crosshair.Zero();
                 }
                 //Cancel AI's attack
             }
