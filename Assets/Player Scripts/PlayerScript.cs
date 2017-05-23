@@ -31,13 +31,11 @@ public class PlayerScript : MonoBehaviour
                 GameObject enemy = GameObject.Find("Enemy");
                 OffenseScript s = (OffenseScript)enemy.GetComponent(typeof(OffenseScript));
                 //Fill the circular marker
-                if (crosshair.activeInHierarchy)
+                if (crosshair.activeSelf)
                 {
-                    //If crosshair is full
                     s.deflectCheck();
                     print("Registered hit on weapon");
                     score += s.score;
-                    //crosshair.Zero();
                 }
                 //Cancel AI's attack
             }
