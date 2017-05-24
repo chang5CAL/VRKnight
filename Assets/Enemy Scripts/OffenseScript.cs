@@ -101,6 +101,7 @@ public class OffenseScript : MonoBehaviour {
             //Make animation stop
             blockSound.Play();
             deflect.Play();
+            resetToDefault();
         }
 
     }
