@@ -29,6 +29,7 @@ public class OffenseScript : MonoBehaviour {
     public AudioSource blockSound;
     public int score;
     int hitTime;
+    int idleTime;
 
     // Use this for initialization
     void Start () {
@@ -43,7 +44,7 @@ public class OffenseScript : MonoBehaviour {
 	void Update () {
         int rand;
         System.Random rnd = new System.Random();
-		if ((int)Time.time % 10 == hitTime)
+		if ((int)Time.time % 10 == idleTime)
         {
             //Another thing is that if it keeps chaining, don't start a new loop.
             if (hitTime == 5 && Time.time < 60)
@@ -90,6 +91,10 @@ public class OffenseScript : MonoBehaviour {
             //Reset chain and isActive
             isActive = false;
             chain = 0;
+        }
+        if (!isActive)
+        {
+            idleTime += (int)Time.time%1;
         }
 	}
 
