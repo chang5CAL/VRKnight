@@ -102,6 +102,43 @@ public class OffenseScript : MonoBehaviour {
             blockSound.Play();
             deflect.Play();
             resetToDefault();
+            System.Random followUp = new System.Random();
+            int follow = followUp.Next((int)Time.time);
+            if (follow > chain * 3)
+            {
+                //Basically, get a random number and if it divided by the chain 
+                //is equal to a certain amount (Probably decided by time), increase
+                //The chance of the enemy to do another attack immediately instead of
+                //waiting.
+                chain++;
+                int rand;
+                System.Random rnd = new System.Random();
+                rand = rnd.Next(6);
+                if (rand == 0)
+                {
+                    SlashLeft();
+                }
+                else if (rand == 1)
+                {
+                    Thrust();
+                }
+                else if (rand == 2)
+                {
+                    SlashLeftQuick();
+                }
+                else if (rand == 3)
+                {
+                    SlashRight();
+                }
+                else if (rand == 4)
+                {
+                    SlashRightQuick();
+                }
+                else if (rand == 6)
+                {
+                    Chop();
+                }
+            }
         }
 
     }
