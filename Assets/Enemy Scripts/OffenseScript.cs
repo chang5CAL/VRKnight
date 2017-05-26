@@ -44,7 +44,8 @@ public class OffenseScript : MonoBehaviour {
 	void Update () {
         int rand;
         System.Random rnd = new System.Random();
-		if ((int)Time.time % 10 == idleTime)
+        System.Random followUp = new System.Random();
+        if ((int)Time.time % 10 == idleTime)
         {
             //Another thing is that if it keeps chaining, don't start a new loop.
             if (hitTime == 5 && Time.time < 60)
@@ -94,7 +95,7 @@ public class OffenseScript : MonoBehaviour {
         }
         if (!isActive)
         {
-            idleTime += (int)Time.time%1;
+            idleTime += (int)Time.time%(followUp.Next((int)Time.time) % 5);
         }
 	}
 
