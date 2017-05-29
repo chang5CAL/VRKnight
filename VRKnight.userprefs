@@ -1,4 +1,4 @@
-﻿<Properties StartupItem="VRKnight.CSharp.csproj">
+﻿<Properties StartupItem="VRKnight.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Player Scripts\PlayerScript.cs">
     <Files>
