@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class VREyeRaycaster : MonoBehaviour {
-
+    public event system.Action OnOver;
 	// Use this for initialization
 	void Start () {
 		
