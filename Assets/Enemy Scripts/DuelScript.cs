@@ -30,7 +30,7 @@ public class DuelScript : MonoBehaviour {
     {
         int rand;
         System.Random rnd = new System.Random();
-        if (Time.fixedDeltaTime % 5 == 0)
+        if (coolDown)
         {
             chain++;
             isActive = true;
@@ -58,6 +58,10 @@ public class DuelScript : MonoBehaviour {
             //Do an attack.
         }
         isActive = false;
+        if (!coolDown)
+        {
+            coolDown = true;
+        }
     }
     void SlashLeft()
     {
