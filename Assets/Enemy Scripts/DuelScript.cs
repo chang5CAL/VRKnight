@@ -32,6 +32,7 @@ public class DuelScript : MonoBehaviour {
         System.Random rnd = new System.Random();
         if (coolDown)
         {
+            coolDown = false;
             chain++;
             isActive = true;
             rand = rnd.Next(5);
@@ -56,12 +57,14 @@ public class DuelScript : MonoBehaviour {
                 SlashRightQuick();
             }
             //Do an attack.
+        } else
+        {
+            if (Time.time % 5 == 0)
+            {
+                coolDown = true;
+            }
         }
         isActive = false;
-        if (!coolDown)
-        {
-            coolDown = true;
-        }
     }
     void SlashLeft()
     {
