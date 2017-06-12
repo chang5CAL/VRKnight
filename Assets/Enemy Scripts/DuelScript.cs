@@ -16,6 +16,7 @@ public class DuelScript : MonoBehaviour {
     int followUp;
     bool coolDown;
     public int score;
+    float timeActive;
 
     // Use this for initialization
     void Start()
@@ -59,12 +60,13 @@ public class DuelScript : MonoBehaviour {
             //Do an attack.
         } else
         {
-            if (Time.time % 5 == 0)
+            if (timeActive < Time.time+5)
             {
                 coolDown = true;
             }
         }
         isActive = false;
+        timeActive = Time.time;
     }
     void SlashLeft()
     {
