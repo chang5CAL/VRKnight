@@ -17,6 +17,7 @@ public class DuelScript : MonoBehaviour {
     bool coolDown;
     public int score;
     float timeActive;
+    double attackCoolDown;
 
     // Use this for initialization
     void Start()
@@ -24,11 +25,16 @@ public class DuelScript : MonoBehaviour {
         isActive = false;
         coolDown = false; //If the player is hit, set to true.
         chain = 0;
+        attackCoolDown = 5;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Time.time / 10 < attackCoolDown)
+        {
+            attackCoolDown -= .5;
+        }
         int rand;
         System.Random rnd = new System.Random();
         if (coolDown)
