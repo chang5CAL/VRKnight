@@ -30,6 +30,8 @@ public class OffenseScript : MonoBehaviour {
     public int score;
     int hitTime;
     int idleTime;
+    double attackCoolDown;
+    int speedMod;
 
     // Use this for initialization
     void Start () {
@@ -38,6 +40,8 @@ public class OffenseScript : MonoBehaviour {
         coolDown = false; //If the player is hit, set to true.
         chain = 0;
         hitTime = 5;
+        attackCoolDown = 5;
+        speedMod = 0;
 	}
 	
 	// Update is called once per frame
@@ -93,7 +97,11 @@ public class OffenseScript : MonoBehaviour {
             isActive = false;
             chain = 0;
         }
-        if (!isActive)
+        if ((int)Time.time%100 == 100)
+        {
+            speedMod++;
+        }
+        if (!isActive && attackCoolDown == Time.time)
         {
             idleTime += (int)Time.time%(followUp.Next((int)Time.time) % 5);
         }
