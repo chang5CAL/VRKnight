@@ -93,10 +93,10 @@ public class OffenseScript : MonoBehaviour {
             }
             //Do an attack.
 
-            //Reset chain and isActive
-            isActive = false;
-            chain = 0;
         }
+        //Reset chain and isActive
+        isActive = false;
+        chain = 0;
         if ((int)Time.time%100 == 100)
         {
             speedMod++;
