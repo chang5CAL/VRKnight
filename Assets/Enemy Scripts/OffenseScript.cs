@@ -41,7 +41,7 @@ public class OffenseScript : MonoBehaviour {
         chain = 0;
         hitTime = 5;
         attackCoolDown = 5;
-        speedMod = 0;
+        speedMod = 1;
 	}
 	
 	// Update is called once per frame
@@ -101,7 +101,7 @@ public class OffenseScript : MonoBehaviour {
         {
             speedMod++;
         }
-        if (!isActive && attackCoolDown == Time.time)
+        if (!isActive && (attackCoolDown/speedMod) == Time.time)
         {
             idleTime += (int)Time.time%(followUp.Next((int)Time.time) % 5);
         }
